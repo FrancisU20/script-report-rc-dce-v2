@@ -9,7 +9,7 @@ def main():
     print ("Iniciando proceso de extracción de datos de Registro Civil para DCE...")
 
     # Variables de la ruta
-    folder = 'history/abril_2024'
+    folder = 'history/marzo_2024'
     folder_output = 'history/marzo_2024/output'
     path_binary_report = f'{folder}/report_bdd.xlsx'
     # Ruta del archivo de datos
@@ -18,8 +18,8 @@ def main():
     path_output = f'{folder_output}/dce.xlsx'
 
     # Setear la fecha de inicio y fin
-    start_date = '2024-04-01'
-    end_date = '2024-04-31'
+    start_date = '2024-03-01'
+    end_date = '2024-03-31'
 
     # Crear instancia de database
     engine = database_connection()

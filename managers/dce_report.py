@@ -65,10 +65,7 @@ def fetch_report_dce(engine, start_date, end_date):
                      .join(area, process.c.area_uuid == area.c.uuid)
                      .join(smart_form, func.upper(binary_report.c.report_name) == func.upper(smart_form.c.code))
     ).where(
-        or_(
-            binary_report.c.updated_on.between(start_date, end_date),
-            binary_report.c.created_on.between(start_date, end_date)
-        )
+        binary_report.c.created_on.between(start_date, end_date)
     )
 
     # Ejecución de la consulta y conversión a DataFrame
